@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.font {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  color: var(--white);
+}
+
+p, a {
+  font-weight: 350;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 450;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 550;
+}

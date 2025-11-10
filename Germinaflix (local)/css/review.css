@@ -1,0 +1,119 @@
+@import url('variables.css');
+
+.background::before, .background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 70vh;
+}
+
+.background::before {
+    background-size: cover;
+    z-index: -2;
+}
+
+.background::after {
+    background: linear-gradient(360deg, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0.8) 20%, rgba(20, 20, 20, 0.6) 40%, rgba(20, 20, 20, 0.45) 60%, rgba(20, 20, 20, 0.2) 80%, rgba(20, 20, 20, 0) 100%);
+    z-index: -1;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 80%;
+    margin-top: 20vh;
+    display: flex;
+}
+
+main>* {
+    width: 100%;
+    max-width: none !important;
+    display: flex;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 0 !important;
+}
+
+.poster {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 2 / 3;
+}
+
+.general {
+    display: flex;
+    align-items:r baseline;
+    flex-direction: column;
+    margin-left: 2.5%;
+}
+
+.general>:first-child {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.general h3 {
+    margin-top: 3% !important;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+.synopsis, .review + p {
+    margin-top: 0.5%;
+    font-size: 1.15rem;
+}
+
+.review + p {
+    text-align: justify;
+}
+
+.review span {
+    font-size: 50%;
+}
+
+.general>:first-child>:first-child>:nth-child(n) {
+    margin-top: 0.5%;
+}
+
+#doctor-strange.background::before {
+    background-image: url('../img/movies/reviews/doctor-strange.jpg');
+    background-position: 50% 40%;
+}
+
+#age-of-ultron.background::before {
+    background-image: url('../img/movies/reviews/age-of-ultron.jpg');
+}
+
+#deadpool-wolverine.background::before {
+    background-image: url('../img/movies/reviews/deadpool-wolverine.jpg');
+}
+
+#guardians-of-the-galaxy.background::before {
+    background-image: url('../img/movies/reviews/guardians-of-the-galaxy.jpg');
+}
+
+#endgame.background::before {
+    background-image: url('../img/movies/reviews/end-game.jpg');
+}

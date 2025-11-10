@@ -1,0 +1,741 @@
+#header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(360deg, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0.8) 20%, rgba(20, 20, 20, 0.6) 40%, rgba(20, 20, 20, 0.45) 60%, rgba(20, 20, 20, 0.2) 80%, rgba(20, 20, 20, 0) 100%);
+    z-index: 10;
+}
+
+#header-wrap::before,
+#header-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s ease-in-out !important;
+    background-repeat: no-repeat;
+}
+
+#header-wrap::before {
+    animation: movie-background 120s steps(1) infinite;
+    background-position: center;
+
+    opacity: 1;
+    z-index: -1;
+}
+
+#header-wrap::after {
+    opacity: 0;
+    z-index: -1;
+}
+
+#content-wrap:has(a:hover) #header-wrap::after {
+    opacity: 1;
+}
+
+@keyframes movie-background {
+    0%   { background-image: url('../img/movies/background/age-of-ultron.jpg'); }
+    6%   { background-image: url('../img/movies/background/infinite-war.jpg'); }
+    12%  { background-image: url('../img/movies/background/doctor-strange.jpg'); }
+    18%  { background-image: url('../img/movies/background/endgame.jpg'); }
+    24%  { background-image: url('../img/movies/background/deadpool.jpg'); }
+    30%  { background-image: url('../img/movies/background/guardians-of-the-galaxy.jpg'); }
+    36%  { background-image: url('../img/movies/background/thunderbolts.jpg'); }
+    42%  { background-image: url('../img/movies/background/far-from-home.jpg'); }
+    48%  { background-image: url('../img/movies/background/demon-slayer.jpeg'); }
+    54%  { background-image: url('../img/movies/background/avengers.jpg'); }
+    60%  { background-image: url('../img/movies/background/the-batman.jpg'); }
+    66%  { background-image: url('../img/movies/background/dragon-ball-super.jpg'); }
+    72%  { background-image: url('../img/movies/background/deadpool-wolverine.jpg'); }
+    78%  { background-image: url('../img/movies/background/one-piece.jpg'); }
+    84%  { background-image: url('../img/movies/background/dark-knight.jpg'); }
+    90%  { background-image: url('../img/movies/background/batman-vs-superman.jpg'); }
+    96%  { background-image: url('../img/movies/background/jurassic-world.jpg'); }
+    100% { background-image: url('../img/movies/background/age-of-ultron.jpg'); } /* volta ao início */
+}
+
+.row label {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/* AGE-OF-ULTRON ↓ */
+#age-of-ultron {
+    background-image: url('../img/movies/big-cover/age-of-ultron.jpg');
+    background-size: 500%;
+    background-position: 45% 15%;
+}
+
+#content-wrap:has(#age-of-ultron:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-age-of-ultron + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/age-of-ultron.jpg') !important;
+}
+
+#age-of-ultron~.big-info::before {
+    background-image: url("../img/movies/big-info/age-of-ultron.jpg");
+}
+
+
+/* INFINITY WAR ↓ */
+#infinity-war {
+    background-image: url('../img/movies/big-cover/infinity-war.jpg');
+    background-size: 400%;
+    background-position: 32% 50%;
+}
+
+#content-wrap:has(#infinity-war:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-infinity-war + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/infinite-war.jpg') !important;
+}
+
+#infinity-war~.big-info::before {
+    background-image: url("../img/movies/big-info/infinity-war.jpg");
+}
+
+
+/* DOCTOR STRANGE ↓ */
+#doctor-strange {
+    background-image: url('../img/movies/big-cover/doctor-strange.jpg');
+    background-size: 480%;
+    background-position: 50% 50%;
+}
+
+#content-wrap:has(#doctor-strange:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-doctor-strange + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/doctor-strange.jpg') !important;
+}
+
+#doctor-strange~.big-info::before {
+    background-image: url("../img/movies/big-info/doctor-strange.jpg");
+}
+
+
+/* ENDGAME ↓ */
+#endgame {
+    background-image: url('../img/movies/big-cover/endgame.jpg');
+    background-size: 500%;
+    background-position: 65% 50%;
+}
+
+#content-wrap:has(#endgame:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-endgame + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/endgame.jpg') !important;
+}
+
+#endgame~.big-info::before {
+    background-image: url("../img/movies/big-info/endgame.jpg");
+}
+
+
+/* DEADPOOL ↓ */
+#deadpool {
+    background-image: url('../img/movies/big-cover/deadpool.jpg');
+    background-size: 480%;
+    background-position: 62% 0;
+}
+
+#content-wrap:has(#deadpool:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-deadpool + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/deadpool.jpg') !important;
+}
+
+#deadpool~.big-info::before {
+    background-image: url("../img/movies/big-info/deadpool.jpg");
+}
+
+
+/* GUARDIANS OF THE GALAXY ↓ */
+#guardians-of-the-galaxy {
+    background-image: url('../img/movies/big-cover/guardians-of-the-galaxy.jpg');
+    background-size: 400%;
+    background-position: 45% 0;
+}
+
+#content-wrap:has(#guardians-of-the-galaxy:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-guardians-of-the-galaxy + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/guardians-of-the-galaxy.jpg') !important;
+}
+
+#guardians-of-the-galaxy~.big-info::before {
+    background-image: url("../img/movies/big-info/guardians-of-the-galaxy.jpg");
+    background-position: top;
+}
+
+
+/* THUNDERBOLTS ↓ */
+#thunderbolts {
+    background-image: url('../img/movies/big-cover/thunderbolts.jpg');
+    background-size: 500%;
+    background-position: 45% 0;
+}
+
+#content-wrap:has(#thunderbolts:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-thunderbolts + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/thunderbolts.jpg') !important;
+}
+
+#thunderbolts~.big-info::before {
+    background-image: url("../img/movies/big-info/thunderbolts.jpg");
+    background-position: top;
+}
+
+
+/* FAR FROM HOME ↓ */
+#far-from-home {
+    background-image: url('../img/movies/big-cover/far-from-home.jpg');
+    background-size: 400%;
+    background-position: center;
+}
+
+#content-wrap:has(#far-from-home:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-far-from-home + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/far-from-home.jpg') !important;
+}
+
+#far-from-home~.big-info::before {
+    background-image: url("../img/movies/big-info/far-from-home.jpg");
+}
+
+
+/* DEMON SLAYER ↓ */
+#demon-slayer {
+    background-image: url('../img/movies/big-cover/demon-slayer.jpg');
+    background-size: 180%;
+    background-position: 50% 20%;
+}
+
+#content-wrap:has(#demon-slayer:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-demon-slayer + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/demon-slayer.jpeg') !important;
+}
+
+#demon-slayer~.big-info::before {
+    background-image: url("../img/movies/big-info/demon-slayer.jpg");
+}
+
+
+/* AVENGERS ↓ */
+#avengers {
+    background-image: url('../img/movies/big-cover/avengers.jpg');
+    background-size: 380%;
+    background-position: 32% 0;
+}
+
+#content-wrap:has(#avengers:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-avengers + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/avengers.jpg') !important;
+}
+
+#avengers~.big-info::before {
+    background-image: url("../img/movies/big-info/avengers.jpg");
+    background-position: 50% 30%;
+}
+
+
+/* THE BATMAN ↓ */
+#the-batman {
+    background-image: url('../img/movies/big-cover/the-batman.jpg');
+    background-size: 500%;
+    background-position: 42% 0;
+}
+
+#content-wrap:has(#the-batman:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-the-batman + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/the-batman.jpg') !important;
+}
+
+#the-batman~.big-info::before {
+    background-image: url("../img/movies/big-info/the-batman.jpg");
+    background-position: 50% 0;
+}
+
+
+/* DRAGON BALL SUPER ↓ */
+#dragon-ball-super {
+    background-image: url('../img/movies/big-cover/dragon-ball-super.jpg');
+    background-size: 410%;
+    background-position: 49.5% 0;
+}
+
+#content-wrap:has(#dragon-ball-super:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-dragon-ball-super + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/dragon-ball-super.jpg') !important;
+}
+
+#dragon-ball-super~.big-info::before {
+    background-image: url("../img/movies/big-info/dragon-ball-super.jpg");
+}
+
+
+/* DEADPOOL & WOLVERINE ↓ */
+#deadpool-wolverine {
+    background-image: url('../img/movies/big-cover/deadpool-wolverine.jpg');
+    background-size: 500%;
+    background-position: 44% 0;
+}
+
+#content-wrap:has(#deadpool-wolverine:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-deadpool-wolverine + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/deadpool-wolverine.jpg') !important;
+}
+
+#deadpool-wolverine~.big-info::before {
+    background-image: url("../img/movies/big-info/deadpool-wolverine.jpg");
+}
+
+
+/* ONE PIECE ↓ */
+#one-piece {
+    background-image: url('../img/movies/big-cover/one-piece.jpg');
+    background-size: 420%;
+    background-position: 50% 0;
+}
+
+#content-wrap:has(#one-piece:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-one-piece + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/one-piece.jpg') !important;
+}
+
+#one-piece~.big-info::before {
+    background-image: url("../img/movies/big-info/one-piece-z.jpg");
+}
+
+
+/* BATMAN: DARK KNIGHT ↓ */
+#dark-knight {
+    background-image: url('../img/movies/big-cover/dark-knight.jpg');
+    background-size: 500%;
+    background-position: 36% 20%;
+}
+
+#content-wrap:has(#dark-knight:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-dark-knight + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/dark-knight.jpg') !important;
+}
+
+#dark-knight~.big-info::before {
+    background-image: url("../img/movies/big-info/dark-knight.jpg");
+}
+
+
+/* BATMAN VS SUPERMAN ↓ */
+#batman-vs-superman {
+    background-image: url('../img/movies/big-cover/batman-vs-superman.jpg');
+    background-size: 300%;
+    background-position: 50% 10%;
+}
+
+#content-wrap:has(#batman-vs-superman:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-batman-vs-superman + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/batman-vs-superman.jpg') !important;
+}
+
+#batman-vs-superman~.big-info::before {
+    background-image: url("../img/movies/big-info/batman-vs-superman.jpg");
+}
+
+
+/* JURASSIC WORLD ↓ */
+#jurassic-world {
+    background-image: url('../img/movies/big-cover/jurassic-world.jpg');
+    background-size: 420%;
+    background-position: 24% 0;
+}
+
+#content-wrap:has(#jurassic-world:hover) #header-wrap::before,
+#content-wrap:has(#checkbox-jurassic-world + .big-info:hover) #header-wrap::before {
+    background-image: url('../img/movies/background/jurassic-world.jpg') !important;
+}
+
+#jurassic-world~.big-info::before {
+    background-image: url("../img/movies/big-info/jurassic-world.jpg");
+}
+
+/* ANT-MAN ↓ */
+
+#ant-man {
+    background-image: url('../img/movies/cover/ant-man.jpg');
+    background-size: 200%;
+    background-position: 50% 60%;
+}
+
+
+
+/* VENOM ↓ */
+
+#venom {
+    background-image: url('../img/movies/cover/venom.jpg');
+    background-size: 180%;
+    background-position: 50% 60%;
+}
+
+
+
+/* VENOM 2 ↓ */
+
+#let-there-be-carnage {
+    background-image: url('../img/movies/cover/let-there-be-carnage.jpg');
+    background-size: 200%;
+    background-position: 50% 10%;
+}
+
+
+
+/* HELLSING ↓ */
+
+#hellsing {
+    background-image: url('../img/movies/cover/hellsing.png');
+    background-size: 200%;
+    background-position: 50% 5%;
+}
+
+
+
+/* JOJO ↓ */
+
+#jojo {
+    background-image: url('../img/movies/cover/jojo.png');
+    background-size: 140%;
+    background-position: 50% 10%;
+}
+
+
+
+/* JOHN WICK ↓ */
+
+#john-wick {
+    background-image: url('../img/movies/cover/john-wick.jpg');
+    background-size: 115%;
+    background-position: 50% 25%;
+}
+
+/* DEATH NOTE ↓ */
+
+#death-note {
+    background-image: url('../img/movies/cover/death-note.jpg');
+    background-size: 125%;
+    background-position: 40% 15%;
+}
+
+
+
+/* MAN OF STEEL ↓ */
+
+#man-of-steel {
+    background-image: url('../img/movies/cover/man-of-steel.jpg');
+    background-size: 170%;
+    background-position: 50% 60%;
+}
+
+
+
+/* SOLO LEVELING ↓ */
+
+#solo-leveling {
+    background-image: url('../img/movies/cover/solo-leveling.jpg');
+    background-size: 130%;
+    background-position: 100% 70%;
+}
+
+
+
+/* DANDADAN ↓ */
+
+#dandadan {
+    background-image: url('../img/movies/cover/dandadan.png');
+    background-size: 120%;
+    background-position: center;
+}
+
+
+
+/* KIMETSU NO YAIBA ↓ */
+
+#kimetsu-no-yaiba {
+    background-image: url('../img/movies/cover/demon-slayer.jpg');
+    background-size: 140%;
+    background-position: center;
+}
+
+
+
+/* DEADPOOL 2 ↓ */
+
+#deadpool-2 {
+    background-image: url('../img/movies/cover/deadpool-2.jpg');
+    background-size: 180%;
+    background-position: 30% 50%;
+}
+
+
+
+/* GUARDIANS OF THE GALAXY VOL 2 ↓ */
+
+#guardians-of-the-galaxy-vol2 {
+    background-image: url('../img/movies/cover/guardians-of-the-galaxy-vol2.jpg');
+    background-size: 260%;
+    background-position: 70% 20%;
+}
+
+
+
+/* ONE PUNCH ↓ */
+
+#one-punch-man {
+    background-image: url('../img/movies/cover/one-punch-man.jpg');
+    background-size: 130%;
+    background-position: center;
+}
+
+
+
+/* PEACEMAKER ↓ */
+
+#peacemaker {
+    background-image: url('../img/movies/cover/peacemaker.jpg');
+    background-size: 155%;
+    background-position: 50% 0;
+}
+
+
+
+/* BETTER CALL SAUL ↓ */
+
+#better-call-saul {
+    background-image: url('../img/movies/cover/better-call-saul.jpg');
+    background-size: 155%;
+    background-position: 40% 0;
+}
+
+
+
+/* BERSERK ↓ */
+
+#berserk {
+    background-image: url('../img/movies/cover/berserk.png');
+    background-size: 190%;
+    background-position: 35% 20%;
+}
+
+
+/* CYBERPUNK ↓ */
+
+#cyberpunk {
+    background-image: url('../img/movies/cover/cyberpunk.jpg');
+    background-size: 130%;
+    background-position: 40% 0;
+}
+
+
+
+/* CHAINSAW MAN (REZE) ↓ */
+
+#chainsaw-man-reze {
+    background-image: url('../img/movies/cover/chainsaw-man-reze.jpg');
+    background-size: 160%;
+    background-position: 10% 50%;
+}
+
+
+
+/* GODZILLA MINUS ONE ↓ */
+
+#godzilla-minus-one {
+    background-image: url('../img/movies/cover/godzilla-minus-one.jpg');
+    background-size: 190%;
+    background-position: 30% 50%;
+}
+
+
+
+/* BLEACH ↓ */
+
+#bleach {
+    background-image: url('../img/movies/cover/bleach.jpg');
+    background-size: 170%;
+    background-position: 50% 50%;
+}
+
+
+
+/* FANTASTIC FOUR ↓ */
+
+#fantastic-four {
+    background-image: url('../img/movies/cover/fantastic-four.jpg');
+    background-size: 220%;
+    background-position: 20% 10%;
+}
+
+
+
+/* JUJUTSU KAISEN ↓ */
+
+#jujutsu-kaisen {
+    background-image: url('../img/movies/cover/jujutsu-kaisen.png');
+    background-size: 130%;
+    background-position: center;
+}
+
+
+
+/* JUJUTSU KAISEN: 0 ↓ */
+
+#jujutsu-kaisen-0 {
+    background-image: url('../img/movies/cover/jujutsu-kaisen-0.jpg');
+    background-size: 130%;
+    background-position: center;
+}
+
+
+
+
+/* THOR: RAGNAROK ↓ */
+
+#ragnarok {
+    background-image: url('../img/movies/cover/ragnarok.jpg');
+    background-size: 190%;
+    background-position: 60% 40%;
+}
+
+
+
+
+/* LOGAN ↓ */
+
+#logan {
+    background-image: url('../img/movies/cover/logan.jpg');
+    background-size: 130%;
+    background-position: center;
+}
+
+
+
+
+/* BLACK PANTHER ↓ */
+
+#black-panther {
+    background-image: url('../img/movies/cover/black-panther.jpg');
+    background-size: 150%;
+    background-position: 50% 10%;
+}
+
+
+
+
+/* CHAINSAW MAN ↓ */
+
+#chainsaw-man {
+    background-image: url('../img/movies/cover/chainsaw-man.jpg');
+    background-size: 150%;
+    background-position: 50% 0;
+}
+
+
+
+
+/* STAR WARS ↓ */
+
+#star-wars {
+    background-image: url('../img/movies/cover/star-wars.jpg');
+    background-size: 175%;
+    background-position: 70% 0;
+}
+
+
+
+
+/* SHIN GODZILLA ↓ */
+
+#shin-godzilla {
+    background-image: url('../img/movies/cover/shin-godzilla.jpg');
+    background-size: 130%;
+    background-position: 0 50%;
+    background-color: #C52026;
+}
+
+
+
+
+/* YU-GI-OH ↓ */
+
+#yu-gi-oh {
+    background-image: url('../img/movies/cover/yu-gi-oh.jpg');
+    background-size: 130%;
+    background-position: center;
+}
+
+
+
+
+/* THE FLASH ↓ */
+
+#the-flash {
+    background-image: url('../img/movies/cover/the-flash.jpg');
+    background-size: 140%;
+    background-position: 30% 0;
+}
+
+
+
+
+/* BREAKING BAD ↓ */
+
+#breaking-bad {
+    background-image: url('../img/movies/cover/breaking-bad.png');
+    background-size: 150%;
+    background-position: 0 10%;
+}
+
+
+
+
+/* MONSTER ↓ */
+
+#monster {
+    background-image: url('../img/movies/cover/monster.jpg');
+    background-size: 145%;
+    background-position: 40% 0%;
+}
+
+
+
+
+/* EVANGELION ↓ */
+
+#evangelion {
+    background-image: url('../img/movies/cover/evangelion.png');
+    background-size: 130%;
+    background-position: 50% 0;
+}
+
+
+
+
+/* FULLMETAL ALCHEMIST ↓ */
+
+#fullmetal-alchemist {
+    background-image: url('../img/movies/cover/fullmetal-alchemist.jpg');
+    background-size: 160%;
+    background-position: 50% 0;
+}
+
+
+
+/* ATTACK ON TITAN ↓ */
+
+#attack-on-titan {
+    background-image: url('../img/movies/cover/attack-on-titan.jpg');
+    background-size: 140%;
+    background-position: 0 0;
+}
+
+
+
+/* HUNTER-X-HUNTER ↓ */
+
+#hunter-x-hunter {
+    background-image: url('../img/movies/cover/hunter-x-hunter.jpg');
+    background-size: 130%;
+    background-position: 35% 50%;
+}
